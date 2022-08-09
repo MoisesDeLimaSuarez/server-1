@@ -58,7 +58,7 @@ const dataBase = [
     }
 ]
 
-const docentes = [{
+const grupoUsuarios = [{
     id: 1,
     nombre: 'Valka',
     apellidos: 'Dondarr',
@@ -111,17 +111,18 @@ const docentes = [{
 //? GET /api/users
 
 app.use("/api", rutas);
-app.get("/api/docentes", (req, res) => {
-    res.json(docentes);
-});
-app.get("/api/docentes/:id", (rec, res) => {
 
-    const docente = docentes.find(docente => docente.id === parseInt(rec.params.id));
-    if (!docente) {
+
+app.get("/api/grupoUsuarios", (req, res) => {
+    res.json(grupoUsuarios);
+});
+app.get("/api/grupoUsuarios/:id", (rec, res) => {
+
+    const docenteID = grupoUsuarios.find(docente => docente.id === parseInt(rec.params.id));
+    if (!docenteID) {
         res.status(404).send("No existe el docente");
     }
-    res.json(docente);
-
+    res.json(docenteID);
 })
 
 //? crear usuario  /api/users
