@@ -1,0 +1,54 @@
+-	Crear un nuevo usuario
+    post(/api/users)
+-	Eliminar un usuario 
+    delete(/api/users/:id)
+-	Añadir nuevos mensajes al usuario
+    put(/api/users/mensajes/:id)
+-	Cambiar el estado de conexión del usuario
+    put(/api/users/conectado/:id)
+-	Modificar la puntuación del usuario
+    put(/api/users/puntuacion/:id)
+
+  
+  1)crear usuario 
+
+  POST 
+
+     http://localhost:3000/api/users
+
+        {
+  "nombre":"fernanda",
+  "mensajes":[],
+  "conectado":true,
+  "seguidores":0,
+  "siguiendo":0,
+  "puntuacion":0
+}
+  
+ 2) modificar la puntuacion del usuario 
+  PATCH
+
+      http://localhost:3000/api/users/puntuacion/2
+
+          {"puntuacion":112}
+
+3)eliminar usuario
+
+ DELETE 
+      http://localhost:3000/api/users/1
+
+4)Añadir nuevos mensajes al usuario
+
+PATCH 
+ 
+      http://localhost:3000/api/users/mensajes/2
+
+      {"mensajes":"mensaje de prueba"}
+
+5) cambiar es estado de un usuario 
+
+PUT 
+      http://localhost:3000/api/users/conectado/2
+
+
+
