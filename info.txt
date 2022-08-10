@@ -1,4 +1,5 @@
--	Crear un nuevo usuario
+-pues nada aqui aprendiendo git y github	
+-Crear un nuevo usuario
     post(/api/users)
 -	Eliminar un usuario 
     delete(/api/users/:id)
